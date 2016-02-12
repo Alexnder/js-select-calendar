@@ -1,0 +1,122 @@
+/*--- 05.02.2016 DZin ---*/
+.calendar_conteiner {
+  position: relative;
+
+  font-size: 0;
+
+  margin: 0 -3px;
+  .nav_month_block {
+    overflow: hidden;
+  }
+  .nav_month_bnt {
+    font-size: 20px;
+
+    text-transform: uppercase;
+
+    color: #3881a9;
+    cursor: pointer;
+    &.prev {
+      float: left;
+      &:before {
+        content: '\f053';
+
+        font-family: $awesome;
+
+        margin-right: 7px;
+      }
+    }
+    &.next {
+      float: right;
+      &:after {
+        content: '\f054';
+
+        font-family: $awesome;
+
+        margin-left: 7px;
+      }
+    }
+  }
+  .calendar_block {
+    display: inline-block;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    width: (100%/3);
+    padding: 10px 5px;
+    @media (max-width:750px) {
+      width: 100%;
+    }
+    .calendar_inside {
+      background: #f1fffe;
+      .month {
+        display: block;
+
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1;
+
+        padding: 5px 0;
+
+        text-align: center;
+
+        color: #fff;
+        background: #3a3f43;
+      }
+      .calendar {
+        table {
+          width: 100%;
+          tr {
+            text-align: center;
+            th {
+              font-weight: 700;
+
+              width: (100%/7);
+
+              text-align: center;
+
+              color: #fff;
+              background: #3a3f43;
+            }
+            td {
+              border: 1px solid #fff;
+              background: #c0dece;
+              &:empty {
+                background: none;
+              }
+            }
+            a {
+              display: block;
+
+              text-decoration: none;
+
+              color: #000;
+            }
+            .event,
+            .past {
+              background: #f1c1c2;
+              a {
+                color: #AAA2A1;
+              }
+            }
+            .curdate {
+              background: #3983aa;
+              a {
+                color: #fff;
+              }
+            }
+            .select {
+              background: #1DB900;
+              a {
+                color: #f0f6fb;
+              }
+            }
+            .error {
+              background: #AD0A0A;
+            }
+          }
+        }
+      }
+    }
+  }
+}
