@@ -2,6 +2,7 @@
 
 ## Sample html
 
+```
   <div class="calendar_conteiner">
     <div class="nav_month_block">
       <span class="nav_month_bnt prev">previous</span>
@@ -26,9 +27,11 @@
       </div>
     </section>
   </div>
+```
 
 ## Sample js
 
+```
   ClassCalendar.addCalendar("calendar1", "month1", -1);
   ClassCalendar.addCalendar("calendar2", "month2");
   ClassCalendar.addCalendar("calendar3", "month3", 1);
@@ -46,3 +49,4 @@
   ClassCalendar.callbackSelectDay = ClassCalendar.callbackHighlight = function(dateStart, dateEnd) {
     // dateStart, dateEnd - Date objects
   };
+```
